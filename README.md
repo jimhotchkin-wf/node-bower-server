@@ -35,7 +35,7 @@ postgres=# `\password vagrant` (password: dev_001101)
 
 `curl http://localhost:3000/packages -v -F 'name=jquery' -F 'url=git://github.com/jquery/jquery.git'`
 
-- or -
+or...
 
 `curl http://localhost:3000/packages -v -F 'name=wf-web-skin' -F 'url=git@github.com:WebFilings/web-skin.git'`
 
