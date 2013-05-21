@@ -21,7 +21,7 @@ var Database = {
               allowNull: false,
               validate: {
                 isGitUrl: function(value) {
-                  if (!value.match(/^git\:\/\//) || !value.match(/^git@github.com\:/)) {
+                  if (!value.match(/^git\:\/\//) && !value.match(/^git@github.com\:/)) {
                     throw new Error('is not correct format');
                   }
                   return this;

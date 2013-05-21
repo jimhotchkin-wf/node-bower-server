@@ -28,8 +28,11 @@ postgres=# `\password vagrant` (password: dev_001101)
 
 `createdb bower-registry`
 
-`node index.js` to init database and start server on [http://localhost:3000](http://localhost:3000)
+## Run server
 
+`cd /vagrant`
+
+`node index.js` to init database and start server on [http://localhost:3000](http://localhost:3000)
 
 ## Create package
 
