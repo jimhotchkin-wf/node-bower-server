@@ -3,7 +3,7 @@ var _ = Sequelize.Utils._ ;
 
 var Database = {
     init: function () {
-        this.sequelize = new Sequelize('development', 'jblanche', '', {
+        this.sequelize = new Sequelize('bower-registry', 'vagrant', 'dev_001101', {
             dialect: 'postgres',
             port: 5432
         }),
@@ -21,7 +21,7 @@ var Database = {
               allowNull: false,
               validate: {
                 isGitUrl: function(value) {
-                  if (!value.match(/^git\:\/\//)) {
+                  if (!value.match(/^git\:\/\//) && !value.match(/^git@github.com\:/)) {
                     throw new Error('is not correct format');
                   }
                   return this;
